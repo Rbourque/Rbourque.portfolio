@@ -1,0 +1,20 @@
+2022_05_11 initial commit.
+
+created classes for three levels of employees(Associate,Manager,Administrator)
+
+  login page
+  main menu
+  employee database manager 
+	  dialog boxes for:
+	  add
+	  remove
+	  edit
+
+2022_05_12
+
+	moved the main menu to its own class and added more info for an employee's payment.
+	added basic stats for the database, and tabs to the payroll window.
+
+2022_05_13
+
+	made some instance variables private.
