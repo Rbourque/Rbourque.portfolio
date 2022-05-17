@@ -18,3 +18,10 @@ created classes for three levels of employees(Associate,Manager,Administrator)
 2022_05_13
 
 	made some instance variables private.
+
+2022_05_16
+
+	mainmenu: buttons now use name variable for their action listener rather then their text. this will be applied to all buttons in the future.
+
+began developing the my account page. 
+it now displays basic information about the user's account.

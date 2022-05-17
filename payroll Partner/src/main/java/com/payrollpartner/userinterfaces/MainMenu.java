@@ -25,19 +25,18 @@ public class MainMenu {
 		mainMenuPanel.setLayout(new GridLayout(empdata.length +7, 1));
 		
 		mainMenuPanel.setBackground(Color.white);
+		mainMenuPanel.setPreferredSize(main.java.com.payrollpartner.userinterfaces.GuiManager.smallbox);
+		
 		for (int b = 0; b < empdata.length; b++) {
 
-			mainMenuPanel.setPreferredSize(main.java.com.payrollpartner.userinterfaces.GuiManager.smallbox);
-			mainMenuPanel.add(new JLabel(empdata[b]));
+		mainMenuPanel.add(new JLabel(empdata[b]));
 
 		}
 		
 
 		
 		String[] categories = new String[] {  "My account", "Payroll", "Employee database", "Company Policies" };
-		//Admin: all buttons.
-		//Manager: all but last.
-		//Associate: only the first.
+
 		
 		
 		switch (main.java.com.payrollpartner.Main.employeeDatabase.getEmployeeByIndex(main.java.com.payrollpartner.Main.loggedinemp).getClass().toString()){
@@ -46,7 +45,7 @@ public class MainMenu {
 			for (int c = 0; c < categories.length; c++)/// makes all the buttons
 			{ // create the button for each key 
 				JButton button = new JButton(categories[c]);
-				// add an ActionListener to the button 
+				button.setName(categories[c]);
 				 
 				button.addActionListener(new mainMenuPanelListener());
 				// add button to keyPanel 
@@ -91,10 +90,10 @@ public class MainMenu {
 	
 	private static class mainMenuPanelListener implements ActionListener {
 
-		public void actionPerformed(ActionEvent event) { /** type the given code for this */
+		public void actionPerformed(ActionEvent event) {
 
 			
-			switch (((JButton) event.getSource()).getText()) {
+			switch (((JButton) event.getSource()).getName()) {
 
 			case "My account":
 

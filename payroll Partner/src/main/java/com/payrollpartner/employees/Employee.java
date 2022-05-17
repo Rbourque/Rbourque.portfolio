@@ -33,6 +33,10 @@ public abstract class Employee {
 	// we need two different constroctors 1: getting from the database. 2: added via
 	// the interface
 
+	
+
+	
+	
 	// from the database
 	public Employee(String IuserName, String IfirstName, String IlastName, String IfullName, char[] IpasswordHash,
 			 String Ititle, String Idepartment, String IreportsTo, int IidNumber, boolean Isalaried,
@@ -96,11 +100,26 @@ public abstract class Employee {
 	}
 
 	
-	//public Employee() {
-		//System.out.print("Error");
-		//error
+	
+	public void togglesalarievswage(Double newPay){
+	this.salaried = !this.salaried;
+	
+	//TODO add logic to add what they ae owed to next paycheck
+	
+	
+	if(salaried){
+	this.salariePayPerPeriod = newPay;
+	this.wage = 0;
+	}else {
+		this.wage = newPay;
+		this.salariePayPerPeriod = 0;
 		
-	//}
+	}
+
+
+	
+	}
+	
 	
 	public double caculateNetPay() {
 		
